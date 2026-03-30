@@ -1,8 +1,8 @@
 /* Root theme variables */
 :root {
-  --bg-color:rgb(16, 74, 145);
-  --bg-elevated:rgb(33, 105, 169);
-  --bg-elevated-soft:rgb(21, 78, 144);
+  --bg-color:rgb(53, 183, 14);
+  --bg-elevated:rgb(79, 218, 93);
+  --bg-elevated-soft:rgb(63, 191, 59);
   --text-color: #0f172a;
   --muted-text: #6b7280;
   --accent-primary:rgb(241, 66, 145);
