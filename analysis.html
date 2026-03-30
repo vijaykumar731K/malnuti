@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Analysis Result • NutriSight AI</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="page-wrapper">
+      <header class="navbar">
+        <div class="navbar-inner container">
+          <a href="index.html" class="brand">
+            <div class="brand-logo"><span></span></div>
+            <div>
+              <div class="brand-text-title">NutriSight AI</div>
+              <div class="brand-text-subtitle">AI Analysis Result</div>
+            </div>
+          </a>
+          <nav class="nav-links">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="upload.html" class="nav-link">Upload data</a>
+            <a href="nutrition.html" class="nav-link">Nutrition</a>
+          </nav>
+          <div class="nav-actions">
+            <div class="theme-toggle" aria-label="Toggle theme" role="button">
+              <span class="theme-toggle-icon">☀</span>
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-knob"></span>
+            </div>
+            <button class="nav-toggle" aria-label="Open navigation">
+              ☰
+            </button>
+          </div>
+        </div>
+        <div class="mobile-menu">
+          <div class="mobile-nav-links">
+            <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+            <a href="upload.html" class="mobile-nav-link">Upload data</a>
+            <a href="nutrition.html" class="mobile-nav-link">Nutrition</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="container analysis-layout" data-analysis data-risk="moderate">
+            <section class="score-card" data-animate="fade-up">
+              <header class="card-header">
+                <h1 class="card-title">AI analysis result</h1>
+                <p class="card-subtitle">
+                  Based on the submitted image and health parameters, the AI estimates this child’s
+                  current nutrition risk.
+                </p>
+              </header>
+
+              <div>
+                <div class="badge" id="childSummary">
+                  Child:
+                  <strong id="childNameOut">—</strong>
+                  • Age:
+                  <strong id="childAgeOut">—</strong>
+                  months • MUAC:
+                  <strong id="childMuacOut">—</strong>
+                  cm • BMI:
+                  <strong id="childBmiOut">—</strong>
+                </div>
+
+                <div class="score-value" id="scoreValue">64 / 100</div>
+                <div class="score-chip">
+                  <span>⚠</span>
+                  <span id="riskLabel">Moderate malnutrition risk</span>
+                </div>
+
+                <div class="risk-pill moderate">
+                  <span>●</span>
+                  <span id="riskFollowup">Follow-up needed within 7 days</span>
+                </div>
+              </div>
+
+              <div class="progress-group">
+                <div class="progress-row">
+                  <div class="progress-label">
+                    <span>Weight-for-height Z-score</span>
+                    <span>-1.9</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill warning" data-progress="weight"></div>
+                  </div>
+                </div>
+                <div class="progress-row">
+                  <div class="progress-label">
+                    <span>Height-for-age Z-score</span>
+                    <span>-1.1</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" data-progress="height"></div>
+                  </div>
+                </div>
+                <div class="progress-row">
+                  <div class="progress-label">
+                    <span>MUAC risk level</span>
+                    <span>Borderline</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill warning" data-progress="muac"></div>
+                  </div>
+                </div>
+              </div>
+
+              <footer class="card-footer">
+                This is a demo analysis. Always confirm findings with clinical assessment and local
+                nutrition protocols.
+              </footer>
+            </section>
+
+            <section class="scan-card" data-animate="fade-up">
+              <header class="card-header">
+                <h2 class="card-title">AI scanning visual</h2>
+                <p class="card-subtitle">
+                  A visual representation of how NutriSight AI inspects growth patterns and
+                  risk-signals for each child.
+                </p>
+              </header>
+
+              <div class="scanner">
+                <div class="scanner-grid"></div>
+                <div class="scanner-beam"></div>
+                <div class="scanner-label">Analyzing facial cues, MUAC &amp; growth charts…</div>
+              </div>
+
+              <ul class="bullet-list">
+                <li>Facial symmetry &amp; fat distribution patterns.</li>
+                <li>Comparison against WHO Z-score references for age and gender.</li>
+                <li>Contextual risk based on MUAC and underweight indicators.</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div>© 2026 NutriSight AI.</div>
+          <div class="footer-links">
+            <a href="upload.html" class="footer-link">Upload another child</a>
+            <a href="nutrition.html" class="footer-link">View nutrition plan</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

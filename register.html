@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register • NutriSight AI</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="page-wrapper">
+      <header class="navbar">
+        <div class="navbar-inner container">
+          <a href="index.html" class="brand">
+            <div class="brand-logo"><span></span></div>
+            <div>
+              <div class="brand-text-title">NutriSight AI</div>
+              <div class="brand-text-subtitle">Register</div>
+            </div>
+          </a>
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="awareness.html" class="nav-link">Awareness</a>
+            <a href="nutrition.html" class="nav-link">Nutrition</a>
+          </nav>
+          <div class="nav-actions">
+            <div class="theme-toggle" aria-label="Toggle theme" role="button">
+              <span class="theme-toggle-icon">☀</span>
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-knob"></span>
+            </div>
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <button class="nav-toggle" aria-label="Open navigation">
+              ☰
+            </button>
+          </div>
+        </div>
+        <div class="mobile-menu">
+          <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="awareness.html" class="mobile-nav-link">Awareness</a>
+            <a href="nutrition.html" class="mobile-nav-link">Nutrition</a>
+            <a href="login.html" class="mobile-nav-link">Login</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="auth-page">
+          <div class="auth-wrapper container" data-animate="fade-up">
+            <section class="auth-copy">
+              <h1 class="auth-copy-title">Create your NutriSight account</h1>
+              <p class="auth-copy-subtitle">
+                Whether you’re a parent or a frontline health worker, NutriSight AI helps you detect
+                malnutrition risks earlier and act sooner.
+              </p>
+              <div class="auth-pills">
+                <div class="auth-pill">
+                  <span class="auth-pill-dot"></span>
+                  Secure, role-based dashboards
+                </div>
+                <div class="auth-pill">
+                  <span class="auth-pill-dot"></span>
+                  Works offline-first with sync-ready design
+                </div>
+                <div class="auth-pill">
+                  <span class="auth-pill-dot"></span>
+                  Privacy-first — images never leave your device in this demo
+                </div>
+              </div>
+            </section>
+
+            <section class="card">
+              <header class="card-header">
+                <h2 class="card-title">Register</h2>
+                <p class="card-subtitle">
+                  Join the early access program for AI-assisted malnutrition screening.
+                </p>
+              </header>
+
+              <form id="registerForm" novalidate>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="name">Full name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      class="form-control"
+                      placeholder="you@example.org"
+                      required
+                    />
+                    <p class="form-hint">Use your official email if you are a health worker.</p>
+                  </div>
+
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label" for="phone">Phone</label>
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        class="form-control"
+                        placeholder="10-digit mobile number"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="role">Role</label>
+                      <select id="role" name="role" class="form-select" required>
+                        <option value="">Select role</option>
+                        <option value="parent">Parent / Caregiver</option>
+                        <option value="health-worker">Health worker / ASHA</option>
+                        <option value="pediatrician">Pediatrician / Doctor</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input
+                      id="password"
+                      name="password"
+                      type="password"
+                      class="form-control"
+                      placeholder="Create a strong password"
+                      required
+                    />
+                    <div class="password-strength">
+                      <div class="password-strength-bar">
+                        <div class="password-strength-indicator"></div>
+                      </div>
+                      <div class="password-strength-label">Password strength: Too weak</div>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Create account</button>
+                </div>
+
+                <footer class="card-footer">
+                  Already have an account?
+                  <a href="login.html" class="link">Login instead</a>
+                </footer>
+              </form>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div>© 2026 NutriSight AI.</div>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="awareness.html" class="footer-link">Malnutrition awareness</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login • NutriSight AI</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-theme="dark">
+    <div class="login-background-orbits">
+      <div class="login-orbit"></div>
+      <div class="login-orbit-secondary"></div>
+    </div>
+
+    <div class="page-wrapper">
+      <header class="navbar">
+        <div class="navbar-inner container">
+          <a href="index.html" class="brand">
+            <div class="brand-logo"><span></span></div>
+            <div>
+              <div class="brand-text-title">NutriSight AI</div>
+              <div class="brand-text-subtitle">Login</div>
+            </div>
+          </a>
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="awareness.html" class="nav-link">Awareness</a>
+          </nav>
+          <div class="nav-actions">
+            <div class="theme-toggle" aria-label="Toggle theme" role="button">
+              <span class="theme-toggle-icon">☀</span>
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-knob"></span>
+            </div>
+            <a href="register.html" class="btn btn-outline">Register</a>
+            <button class="nav-toggle" aria-label="Open navigation">
+              ☰
+            </button>
+          </div>
+        </div>
+        <div class="mobile-menu">
+          <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="awareness.html" class="mobile-nav-link">Awareness</a>
+            <a href="register.html" class="mobile-nav-link">Register</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="auth-page">
+          <div class="auth-wrapper container" data-animate="fade-up">
+            <section class="auth-copy">
+              <h1 class="auth-copy-title">Welcome back</h1>
+              <p class="auth-copy-subtitle">
+                Login to access dashboards for child screenings, risk reports and nutrition advice.
+              </p>
+              <div class="auth-pills">
+                <div class="auth-pill">
+                  <span class="auth-pill-dot"></span>
+                  AI-assisted triage for high-risk children
+                </div>
+                <div class="auth-pill">
+                  <span class="auth-pill-dot"></span>
+                  Track growth over time with visual reports
+                </div>
+              </div>
+            </section>
+
+            <section class="glass-card">
+              <header class="card-header">
+                <h2 class="card-title">Login</h2>
+                <p class="card-subtitle">
+                  Use your registered email and password to continue to your dashboard.
+                </p>
+              </header>
+
+              <form id="loginForm" novalidate>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="login-email">Email</label>
+                    <input
+                      id="login-email"
+                      name="email"
+                      type="email"
+                      class="form-control"
+                      placeholder="you@example.org"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="login-password">Password</label>
+                    <input
+                      id="login-password"
+                      name="password"
+                      type="password"
+                      class="form-control"
+                      placeholder="Enter your password"
+                      required
+                    />
+                    <div class="form-hint">
+                      <a href="#" class="link">Forgot password?</a>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+
+                <footer class="card-footer">
+                  New here?
+                  <a href="register.html" class="link">Create an account</a>
+                </footer>
+              </form>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div>© 2026 NutriSight AI.</div>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="awareness.html" class="footer-link">Awareness</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

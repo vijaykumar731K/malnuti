@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard • NutriSight AI</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body data-theme="dark">
+    <div class="page-wrapper">
+      <header class="navbar">
+        <div class="navbar-inner container">
+          <a href="index.html" class="brand">
+            <div class="brand-logo"><span></span></div>
+            <div>
+              <div class="brand-text-title">NutriSight AI</div>
+              <div class="brand-text-subtitle">Admin Analytics</div>
+            </div>
+          </a>
+          <nav class="nav-links">
+            <a href="dashboard.html" class="nav-link">User dashboard</a>
+            <a href="admin.html" class="nav-link">Admin analytics</a>
+          </nav>
+          <div class="nav-actions">
+            <div class="theme-toggle" aria-label="Toggle theme" role="button">
+              <span class="theme-toggle-icon">☀</span>
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-knob"></span>
+            </div>
+            <button class="nav-toggle" aria-label="Open navigation">
+              ☰
+            </button>
+          </div>
+        </div>
+        <div class="mobile-menu">
+          <div class="mobile-nav-links">
+            <a href="dashboard.html" class="mobile-nav-link">User dashboard</a>
+            <a href="admin.html" class="mobile-nav-link">Admin analytics</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="container">
+            <header class="dashboard-header" data-animate="fade-up">
+              <div>
+                <h1 class="dashboard-title">Programme overview</h1>
+                <p class="dashboard-subtitle">
+                  Track how NutriSight AI is being used across screening camps, clinics and
+                  communities.
+                </p>
+              </div>
+              <div class="dashboard-meta">
+                <span class="badge">Pilot phase • Demo data</span>
+                <span class="badge">Last sync: just now</span>
+              </div>
+            </header>
+
+            <section class="admin-grid">
+              <article class="chart-card" data-animate="fade-up">
+                <h2 class="card-title">Monthly screening trends</h2>
+                <p class="card-subtitle">
+                  Number of children screened and high-risk cases flagged by the AI, month on
+                  month.
+                </p>
+                <canvas id="trendChart" height="160"></canvas>
+                <div class="chart-legend">
+                  <span class="legend-item">
+                    <span class="legend-dot" style="background:#2563eb"></span>
+                    <span>Children screened</span>
+                  </span>
+                  <span class="legend-item">
+                    <span class="legend-dot" style="background:#ef4444"></span>
+                    <span>High-risk cases</span>
+                  </span>
+                </div>
+              </article>
+
+              <article class="chart-card" data-animate="fade-up">
+                <h2 class="card-title">Current risk distribution</h2>
+                <p class="card-subtitle">
+                  Breakdown of AI-classified nutrition status across the last 1,000 screenings.
+                </p>
+                <canvas id="riskChart" height="160"></canvas>
+                <div class="kpi-grid">
+                  <div class="kpi-card">
+                    <div class="kpi-label">Total children analyzed</div>
+                    <div class="kpi-value">12,430</div>
+                    <div class="kpi-trend">+8.2% vs last month</div>
+                  </div>
+                  <div class="kpi-card">
+                    <div class="kpi-label">High-risk cases</div>
+                    <div class="kpi-value">1,248</div>
+                    <div class="kpi-trend negative">-3.1% vs last month</div>
+                  </div>
+                  <div class="kpi-card">
+                    <div class="kpi-label">Average response time</div>
+                    <div class="kpi-value">18 min</div>
+                    <div class="kpi-trend">+Field teams responding faster</div>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div>© 2026 NutriSight AI — Admin view.</div>
+          <div class="footer-links">
+            <a href="dashboard.html" class="footer-link">Switch to user view</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

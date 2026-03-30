@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard • NutriSight AI</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="page-wrapper">
+      <header class="navbar">
+        <div class="navbar-inner container">
+          <a href="index.html" class="brand">
+            <div class="brand-logo"><span></span></div>
+            <div>
+              <div class="brand-text-title">NutriSight AI</div>
+              <div class="brand-text-subtitle">Child Screening Dashboard</div>
+            </div>
+          </a>
+          <nav class="nav-links">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="upload.html" class="nav-link">Upload data</a>
+            <a href="nutrition.html" class="nav-link">Nutrition</a>
+            <a href="awareness.html" class="nav-link">Awareness</a>
+          </nav>
+          <div class="nav-actions">
+            <div class="theme-toggle" aria-label="Toggle theme" role="button">
+              <span class="theme-toggle-icon">☀</span>
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-knob"></span>
+            </div>
+            <a href="admin.html" class="btn btn-outline">Admin</a>
+            <button class="nav-toggle" aria-label="Open navigation">
+              ☰
+            </button>
+          </div>
+        </div>
+        <div class="mobile-menu">
+          <div class="mobile-nav-links">
+            <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+            <a href="upload.html" class="mobile-nav-link">Upload data</a>
+            <a href="nutrition.html" class="mobile-nav-link">Nutrition</a>
+            <a href="awareness.html" class="mobile-nav-link">Awareness</a>
+            <a href="admin.html" class="mobile-nav-link">Admin</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="dashboard-section">
+          <div class="container">
+            <header class="dashboard-header" data-animate="fade-up">
+              <div>
+                <h1 class="dashboard-title">Welcome, Health Worker</h1>
+                <p class="dashboard-subtitle">
+                  Quickly access AI tools for child screenings, risk reports and nutrition
+                  recommendations.
+                </p>
+              </div>
+              <div class="dashboard-meta">
+                <span class="badge">Today • 7 children screened</span>
+                <span class="badge">2 high-risk cases flagged</span>
+              </div>
+            </header>
+
+            <section class="dashboard-cards">
+              <article class="dashboard-card" data-animate="fade-up">
+                <div class="dashboard-card-icon">⬆</div>
+                <h2 class="dashboard-card-title">Upload child data</h2>
+                <p class="dashboard-card-text">
+                  Start a new AI screening by uploading a child image and entering key anthropometric
+                  data.
+                </p>
+                <div class="dashboard-card-footer">
+                  <a href="upload.html" class="link">Start new screening →</a>
+                </div>
+              </article>
+
+              <article class="dashboard-card" data-animate="fade-up">
+                <div class="dashboard-card-icon">📑</div>
+                <h2 class="dashboard-card-title">View recent reports</h2>
+                <p class="dashboard-card-text">
+                  Review AI-generated risk levels, growth charts and suggested follow-ups for each
+                  child.
+                </p>
+                <div class="dashboard-card-footer">
+                  <a href="analysis.html" class="link">Open sample report →</a>
+                </div>
+              </article>
+
+              <article class="dashboard-card" data-animate="fade-up">
+                <div class="dashboard-card-icon">🥗</div>
+                <h2 class="dashboard-card-title">Nutrition advice</h2>
+                <p class="dashboard-card-text">
+                  Access curated, age-specific nutrition guidance and weekly meal ideas you can
+                  share with families.
+                </p>
+                <div class="dashboard-card-footer">
+                  <a href="nutrition.html" class="link">View recommendations →</a>
+                </div>
+              </article>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div>© 2026 NutriSight AI.</div>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="admin.html" class="footer-link">Admin dashboard</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

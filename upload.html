@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Child Data • NutriSight AI</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="page-wrapper">
+      <header class="navbar">
+        <div class="navbar-inner container">
+          <a href="index.html" class="brand">
+            <div class="brand-logo"><span></span></div>
+            <div>
+              <div class="brand-text-title">NutriSight AI</div>
+              <div class="brand-text-subtitle">New Screening</div>
+            </div>
+          </a>
+          <nav class="nav-links">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="upload.html" class="nav-link">Upload data</a>
+            <a href="analysis.html" class="nav-link">AI result</a>
+          </nav>
+          <div class="nav-actions">
+            <div class="theme-toggle" aria-label="Toggle theme" role="button">
+              <span class="theme-toggle-icon">☀</span>
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-knob"></span>
+            </div>
+            <button class="nav-toggle" aria-label="Open navigation">
+              ☰
+            </button>
+          </div>
+        </div>
+        <div class="mobile-menu">
+          <div class="mobile-nav-links">
+            <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+            <a href="upload.html" class="mobile-nav-link">Upload data</a>
+            <a href="analysis.html" class="mobile-nav-link">AI result</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="container upload-layout">
+            <section class="upload-card" data-animate="fade-up">
+              <header class="card-header">
+                <h1 class="card-title">Upload child data</h1>
+                <p class="card-subtitle">
+                  Capture accurate anthropometric information and a clear child image to let the AI
+                  assess malnutrition risk.
+                </p>
+              </header>
+
+              <form id="childDataForm" novalidate>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="child-name">Child name</label>
+                    <input
+                      id="child-name"
+                      name="childName"
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter child full name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label" for="age">Age (months)</label>
+                      <input
+                        id="age"
+                        name="age"
+                        type="number"
+                        min="0"
+                        max="59"
+                        class="form-control"
+                        placeholder="e.g. 24"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="gender">Gender</label>
+                      <select id="gender" name="gender" class="form-select" required>
+                        <option value="">Select</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="other">Other / Prefer not to say</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label" for="height">Height (cm)</label>
+                      <input
+                        id="height"
+                        name="height"
+                        type="number"
+                        min="30"
+                        max="130"
+                        step="0.1"
+                        class="form-control"
+                        placeholder="e.g. 85.5"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="weight">Weight (kg)</label>
+                      <input
+                        id="weight"
+                        name="weight"
+                        type="number"
+                        min="2"
+                        max="30"
+                        step="0.1"
+                        class="form-control"
+                        placeholder="e.g. 11.2"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="muac">MUAC (cm)</label>
+                    <input
+                      id="muac"
+                      name="muac"
+                      type="number"
+                      min="8"
+                      max="20"
+                      step="0.1"
+                      class="form-control"
+                      placeholder="Mid-Upper Arm Circumference"
+                      required
+                    />
+                    <p class="form-hint">
+                      MUAC &lt; 11.5 cm usually indicates severe acute malnutrition.
+                    </p>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Child image</label>
+                    <div class="upload-dropzone">
+                      <div class="upload-dropzone-icon">📷</div>
+                      <div class="upload-dropzone-text-main">
+                        Drag &amp; drop image here, or click to browse
+                      </div>
+                      <div class="upload-dropzone-text-sub">
+                        Clear, front-facing photo only. Used for demo analysis.
+                      </div>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        style="opacity: 0; position: absolute; inset: 0; cursor: pointer"
+                      />
+                    </div>
+                    <div class="upload-preview">
+                      <img src="" alt="Child preview" />
+                      <div class="upload-preview-meta"></div>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Analyze with AI</button>
+                </div>
+              </form>
+            </section>
+
+            <aside class="upload-card" data-animate="fade-up">
+              <header class="card-header">
+                <h2 class="card-title">Tips for accurate screening</h2>
+                <p class="card-subtitle">
+                  Follow these simple steps so the AI can provide the most reliable result.
+                </p>
+              </header>
+              <ul class="bullet-list">
+                <li>Measure height and weight twice and use the average.</li>
+                <li>Ensure MUAC tape is placed at the mid-point of the upper arm.</li>
+                <li>Use good lighting and avoid strong shadows on the child’s face.</li>
+                <li>Keep the child’s head in a neutral, front-facing position.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div>© 2026 NutriSight AI.</div>
+          <div class="footer-links">
+            <a href="dashboard.html" class="footer-link">Dashboard</a>
+            <a href="analysis.html" class="footer-link">AI analysis</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
